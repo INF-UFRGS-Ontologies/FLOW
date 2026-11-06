@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/flow
+
+idspace: FLOW
+base_url: /obo/flow
+
+products:
+- flow.owl: https://raw.githubusercontent.com/INF-UFRGS-Ontologies/FLOW/master/flow.owl
+- flow.obo: https://raw.githubusercontent.com/INF-UFRGS-Ontologies/FLOW/master/flow.obo
+
+term_browser: ontobee
+example_terms:
+- FLOW_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/INF-UFRGS-Ontologies/FLOW/v
+
+- prefix: /tracker/
+  replacement: https://github.com/INF-UFRGS-Ontologies/FLOW/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/FLOW?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/INF-UFRGS-Ontologies/FLOW/master/
+

@@ -1,0 +1,37 @@
+## General Settings ##
+uribase: https://www.inf.ufrgs.br/ontologies
+license: https://opensource.org/license/mit
+github_org: INF-UFRGS-Ontologies
+ci:
+ - github_actions
+export_formats:
+ - owl
+ - ttl
+release_artefacts:
+ - base
+ - full
+ - simple
+
+## Ontology Metadata ##
+id: flow
+title: Flow Linking Ontology of Wonders (FLOW)
+description: "Ontology for describing fluid flow through functional locations in transformation industry installations."
+creators:
+ - Cauã Roca Antunes
+contributors:
+ - Nicolau Santos
+ - Abel Correa Dias
+ - Mara Abel
+ - Fabrício Henrique Rodrigues
+
+## Github Settings ##
+repo: FLOW
+git_main_branch: master
+
+## Specific Settings ##
+import_group:
+  products:
+    - id: bfo
+    - id: ofl
+      mirror_from: https://www.inf.ufrgs.br/ontologies/ofl.owl
+
