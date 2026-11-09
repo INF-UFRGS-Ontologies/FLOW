@@ -1,0 +1,334 @@
+@prefix : <https://www.inf.ufrgs.br/ontologies/flow/flow-simple.ttl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix annotation: <https://spec.industrialontologies.org/ontology/annotation/> .
+@base <https://www.inf.ufrgs.br/ontologies/flow/flow-simple.ttl> .
+
+<https://www.inf.ufrgs.br/ontologies/flow/flow-simple.ttl> rdf:type owl:Ontology ;
+                                                            owl:versionIRI <https://www.inf.ufrgs.br/ontologies/flow/releases/2026-11-09/flow-simple.ttl> ;
+                                                            dc:contributor "Abel Correa Dias"@en ,
+                                                                           "Fabrício Henrique Rodrigues"@en ,
+                                                                           "Haroldo Rojas"@en ,
+                                                                           "Mara Abel"@en ,
+                                                                           "Nicolau Santos"@en ;
+                                                            dc:creator "Cauã Roca Antunes"@en ;
+                                                            terms:description "Ontologia para descrever fluco de fluidos através de locais de instalação em instalações de indústria de transformação."@pt-br ,
+                                                                              "Ontology for describing fluid flow through functional locations in transformation industry installations."@en ;
+                                                            terms:license <https://opensource.org/license/mit> ;
+                                                            terms:title "Flow Linking Ontology of Wonders (FLOW)" ;
+                                                            owl:versionInfo "2026-11-09" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty ;
+                  rdfs:label "description" ,
+                             "description"@en-us .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty ;
+              rdfs:label "license" ,
+                         "license"@en-us .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty ;
+            rdfs:label "title" ,
+                       "title"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/adaptedFrom
+annotation:adaptedFrom rdf:type owl:AnnotationProperty .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition
+annotation:naturalLanguageDefinition rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+<http://purl.obolibrary.org/obo/BFO_0000196> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000001
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000001> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between things that exchange electric charge, i.e. have electrical current between them."@en ;
+                                                        rdfs:label "exchanges electricity with"@en ,
+                                                                   "troca eletricidade com"@pt-br ;
+                                                        annotation:adaptedFrom "https://w3id.org/fso#exchangesElectricityWith"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000002
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000002> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have a liquid exchange connection."@en ;
+                                                        rdfs:label "exchanges liquid with"@en ,
+                                                                   "troca líquido com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have a gas exchange connection."@en ;
+                                                        rdfs:label "exchanges gas with"@en ,
+                                                                   "troca gás com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have an air exchange connection."@en ;
+                                                        rdfs:label "exchanges air with"@en ,
+                                                                   "troca ar com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006> ;
+                                                        rdfs:comment "Relation from a thing feeding gas to the thing it is feeding gas to."@en ;
+                                                        rdfs:label "alimenta gás para"@pt-br ,
+                                                                   "feeds gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028> ;
+                                                        rdfs:comment "Relation from a thing that is fed gas to the thing feeding the gas."@en ;
+                                                        rdfs:label "has gas fed by"@en ,
+                                                                   "tem gás alimentado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009> ;
+                                                        rdfs:comment "Relation between a thing that is returning gas to the thing it is returning gas to."@en ;
+                                                        rdfs:label "retorna gás para"@pt-br ,
+                                                                   "returns gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010> ;
+                                                        rdfs:comment "Relation between a thing that is supplying gas to the thing it is supplying gas to."@en ;
+                                                        rdfs:label "fornece gás para"@pt-br ,
+                                                                   "supplies gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029> ;
+                                                        rdfs:comment "Relation between a thing that has gas returned to it and the thing returning the gas."@en ;
+                                                        rdfs:label "has gas returned by"@en ,
+                                                                   "tem gás retornado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030> ;
+                                                        rdfs:comment "Relation between a thing that has gas supplied to it and the thing supplying the gas."@en ;
+                                                        rdfs:label "has gas supplied by"@en ,
+                                                                   "tem gás fornecido por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012> ;
+                                                        rdfs:comment "Relation from a thing feeding air to the thing it is feeding air to."@en ;
+                                                        rdfs:label "alimenta ar para"@pt-br ,
+                                                                   "feeds air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006> ;
+                                                        rdfs:comment "Relation from a thing that is fed air to the thing feeding the air."@en ;
+                                                        rdfs:label "has air fed by"@en ,
+                                                                   "tem ar alimentado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000013
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000013> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015> ;
+                                                        rdfs:comment "Relation between a thing that is returning air to the thing it is returning air to."@en ;
+                                                        rdfs:label "retorna ar para"@pt-br ,
+                                                                   "returns air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000014
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000014> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016> ;
+                                                        rdfs:comment "Relation between a thing that is supplying air to the thing it is supplying air to."@en ;
+                                                        rdfs:label "fornece ar para"@pt-br ,
+                                                                   "supplies air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012> ;
+                                                        rdfs:comment "Relation between a thing that has air returned to it and the thing returning the air."@en ;
+                                                        rdfs:label "has air returned by"@en ,
+                                                                   "tem ar retornado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010> ,
+                                                                           <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012> ;
+                                                        rdfs:comment "Relation between a thing that has air supplied to it and the thing supplying the air."@en ;
+                                                        rdfs:label "has air supplied by"@en ,
+                                                                   "tem ar fornecido por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have a logical connection (such as within a business process) but not necessarily a physical one."@en ;
+                                                        rdfs:label "conectado logicamente a"@pt-br ,
+                                                                   "logically connected to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have a signal exchange connection."@en ;
+                                                        rdfs:label "exchanges signal with"@en ,
+                                                                   "troca sinal com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000019
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000019> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020> ;
+                                                        rdfs:comment "Relation from a thing sending some signal to the thing it is sending signal to."@en ;
+                                                        rdfs:label "envia sinal para"@pt-br ,
+                                                                   "sends signal to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018> ;
+                                                        rdfs:comment "Relation from a thing that receives some signal to the thing sending the signal."@en ;
+                                                        rdfs:label "recebe sinal de"@pt-br ,
+                                                                   "receives signal from"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033> ;
+                                                        rdf:type owl:SymmetricProperty ;
+                                                        rdfs:comment "Relation between two things which have a fluid exchange connection"@en ;
+                                                        rdfs:label "exchanges fluid with"@en ,
+                                                                   "troca fluido com"@pt-br ;
+                                                        annotation:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028> ;
+                                                        rdfs:comment "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en ;
+                                                        rdfs:label "alimenta fluido para"@pt-br ,
+                                                                   "feeds fluid to"@en ;
+                                                        annotation:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026> ;
+                                                        rdfs:comment "Relation from a thing that is fed fluid to the thing feeding the fluid."@en ;
+                                                        rdfs:label "has fluid fed by"@en ,
+                                                                   "tem fluido alimentado por"@pt-br ;
+                                                        annotation:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031> ;
+                                                        rdfs:comment "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en ;
+                                                        rdfs:label "has fluid returned by"@en ,
+                                                                   "tem fluido retornado por"@pt-br ;
+                                                        annotation:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027> ;
+                                                        owl:inverseOf <https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032> ;
+                                                        rdfs:comment "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en ;
+                                                        rdfs:label "has fluid supplied by"@en ,
+                                                                   "tem fluido fornecido por"@pt-br ;
+                                                        annotation:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031> rdf:type owl:ObjectProperty .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032> rdf:type owl:ObjectProperty .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033
+<https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033> rdf:type owl:ObjectProperty ,
+                                                                 owl:SymmetricProperty ;
+                                                        rdfs:label "conectado a"@pt-br ,
+                                                                   "connected to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018
+<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "instalado em"@pt-br ,
+                                                                 "installed at"@en ;
+                                                      annotation:naturalLanguageDefinition "A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties."@en ,
+                                                                                           "Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate."@pt-br .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

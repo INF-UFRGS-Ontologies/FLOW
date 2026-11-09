@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.inf.ufrgs.br/ontologies/flow/flow-simple.owl#"
+     xml:base="https://www.inf.ufrgs.br/ontologies/flow/flow-simple.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:annotation="https://spec.industrialontologies.org/ontology/annotation/">
+    <owl:Ontology rdf:about="https://www.inf.ufrgs.br/ontologies/flow/flow-simple.owl">
+        <owl:versionIRI rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/releases/2026-11-09/flow-simple.owl"/>
+        <dc:contributor xml:lang="en">Abel Correa Dias</dc:contributor>
+        <dc:contributor xml:lang="en">Fabrício Henrique Rodrigues</dc:contributor>
+        <dc:contributor xml:lang="en">Haroldo Rojas</dc:contributor>
+        <dc:contributor xml:lang="en">Mara Abel</dc:contributor>
+        <dc:contributor xml:lang="en">Nicolau Santos</dc:contributor>
+        <dc:creator xml:lang="en">Cauã Roca Antunes</dc:creator>
+        <terms:description xml:lang="pt-br">Ontologia para descrever fluco de fluidos através de locais de instalação em instalações de indústria de transformação.</terms:description>
+        <terms:description xml:lang="en">Ontology for describing fluid flow through functional locations in transformation industry installations.</terms:description>
+        <terms:license rdf:resource="https://opensource.org/license/mit"/>
+        <terms:title>Flow Linking Ontology of Wonders (FLOW)</terms:title>
+        <owl:versionInfo>2026-11-09</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+        <rdfs:label xml:lang="en-us">description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+        <rdfs:label xml:lang="en-us">license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:label xml:lang="en-us">title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/annotation/adaptedFrom -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/annotation/adaptedFrom"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000001 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000001">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between things that exchange electric charge, i.e. have electrical current between them.</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges electricity with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca eletricidade com</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">https://w3id.org/fso#exchangesElectricityWith</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000002 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000002">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a liquid exchange connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges liquid with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca líquido com</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a gas exchange connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges gas with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca gás com</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have an air exchange connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges air with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca ar com</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006"/>
+        <rdfs:comment xml:lang="en">Relation from a thing feeding gas to the thing it is feeding gas to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">alimenta gás para</rdfs:label>
+        <rdfs:label xml:lang="en">feeds gas to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028"/>
+        <rdfs:comment xml:lang="en">Relation from a thing that is fed gas to the thing feeding the gas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has gas fed by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem gás alimentado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that is returning gas to the thing it is returning gas to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">retorna gás para</rdfs:label>
+        <rdfs:label xml:lang="en">returns gas to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that is supplying gas to the thing it is supplying gas to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">fornece gás para</rdfs:label>
+        <rdfs:label xml:lang="en">supplies gas to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has gas returned to it and the thing returning the gas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has gas returned by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem gás retornado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has gas supplied to it and the thing supplying the gas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has gas supplied by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem gás fornecido por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012"/>
+        <rdfs:comment xml:lang="en">Relation from a thing feeding air to the thing it is feeding air to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">alimenta ar para</rdfs:label>
+        <rdfs:label xml:lang="en">feeds air to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006"/>
+        <rdfs:comment xml:lang="en">Relation from a thing that is fed air to the thing feeding the air.</rdfs:comment>
+        <rdfs:label xml:lang="en">has air fed by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem ar alimentado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000013 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000013">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that is returning air to the thing it is returning air to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">retorna ar para</rdfs:label>
+        <rdfs:label xml:lang="en">returns air to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000014 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000014">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that is supplying air to the thing it is supplying air to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">fornece ar para</rdfs:label>
+        <rdfs:label xml:lang="en">supplies air to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has air returned to it and the thing returning the air.</rdfs:comment>
+        <rdfs:label xml:lang="en">has air returned by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem ar retornado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has air supplied to it and the thing supplying the air.</rdfs:comment>
+        <rdfs:label xml:lang="en">has air supplied by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem ar fornecido por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a logical connection (such as within a business process) but not necessarily a physical one.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">conectado logicamente a</rdfs:label>
+        <rdfs:label xml:lang="en">logically connected to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a signal exchange connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges signal with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca sinal com</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000019 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000019">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020"/>
+        <rdfs:comment xml:lang="en">Relation from a thing sending some signal to the thing it is sending signal to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">envia sinal para</rdfs:label>
+        <rdfs:label xml:lang="en">sends signal to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018"/>
+        <rdfs:comment xml:lang="en">Relation from a thing that receives some signal to the thing sending the signal.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">recebe sinal de</rdfs:label>
+        <rdfs:label xml:lang="en">receives signal from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a fluid exchange connection</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges fluid with</rdfs:label>
+        <rdfs:label xml:lang="pt-br">troca fluido com</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">http://www.w3id.org/fso</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028"/>
+        <rdfs:comment xml:lang="en">Relation from a thing feeding fluid to the thing it is feeding fluid to.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">alimenta fluido para</rdfs:label>
+        <rdfs:label xml:lang="en">feeds fluid to</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">http://www.w3id.org/fso</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026"/>
+        <rdfs:comment xml:lang="en">Relation from a thing that is fed fluid to the thing feeding the fluid.</rdfs:comment>
+        <rdfs:label xml:lang="en">has fluid fed by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem fluido alimentado por</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">http://www.w3id.org/fso</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has fluid returned to it and the thing returning the fluid.</rdfs:comment>
+        <rdfs:label xml:lang="en">has fluid returned by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem fluido retornado por</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">http://www.w3id.org/fso</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030">
+        <rdfs:subPropertyOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032"/>
+        <rdfs:comment xml:lang="en">Relation between a thing that has fluid supplied to it and the thing supplying the fluid.</rdfs:comment>
+        <rdfs:label xml:lang="en">has fluid supplied by</rdfs:label>
+        <rdfs:label xml:lang="pt-br">tem fluido fornecido por</rdfs:label>
+        <annotation:adaptedFrom xml:lang="en">http://www.w3id.org/fso</annotation:adaptedFrom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031"/>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032"/>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="pt-br">conectado a</rdfs:label>
+        <rdfs:label xml:lang="en">connected to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018">
+        <rdfs:label xml:lang="pt-br">instalado em</rdfs:label>
+        <rdfs:label xml:lang="en">installed at</rdfs:label>
+        <annotation:naturalLanguageDefinition xml:lang="en">A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties.</annotation:naturalLanguageDefinition>
+        <annotation:naturalLanguageDefinition xml:lang="pt-br">Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate.</annotation:naturalLanguageDefinition>
+    </owl:ObjectProperty>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

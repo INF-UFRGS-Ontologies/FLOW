@@ -1,4 +1,4 @@
-Prefix(:=<https://www.inf.ufrgs.br/ontologies/flow.owl#>)
+Prefix(flow:=<https://www.inf.ufrgs.br/ontologies/flow/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -6,6 +6,9 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(iof-av:=<https://spec.industrialontologies.org/ontology/annotation/>)
+Prefix(ofl:=<https://www.inf.ufrgs.br/ontologies/ofl/>)
 
 
 Ontology(<https://www.inf.ufrgs.br/ontologies/flow.owl>
@@ -13,16 +16,58 @@ Ontology(<https://www.inf.ufrgs.br/ontologies/flow.owl>
 Import(<https://www.inf.ufrgs.br/ontologies/flow/imports/bfo_import.owl>)
 Import(<https://www.inf.ufrgs.br/ontologies/flow/imports/ofl_import.owl>)
 
+Annotation(dce:contributor "Fabrício Henrique Rodrigues"@en)
+Annotation(dce:contributor "Haroldo Rojas"@en)
+Annotation(dce:contributor "Mara Abel"@en)
+Annotation(dce:contributor "Nicolau Santos"@en)
+Annotation(dce:contributor "Abel Correa Dias"@en)
+Annotation(dce:creator "Cauã Roca Antunes"@en)
 
-Annotation(dcterms:description "Ontology for describing fluid flow through functional locations in transformation industry installations.")
+
+Annotation(dcterms:description "Ontology for describing fluid flow through functional locations in transformation industry installations."@en)
+Annotation(dcterms:description "Ontologia para descrever fluco de fluidos através de locais de instalação em instalações de indústria de transformação."@pt-br)
 Annotation(dcterms:license <https://opensource.org/license/mit>)
 Annotation(dcterms:title "Flow Linking Ontology of Wonders (FLOW)")
 
-
-Declaration(Class(<https://www.inf.ufrgs.br/ontologies/FLOW_0000000>))
+Declaration(Class(flow:FLOW_0000021))
+Declaration(Class(flow:FLOW_0000022))
+Declaration(Class(flow:FLOW_0000023))
+Declaration(Class(flow:FLOW_0000024))
+Declaration(Class(flow:FLOW_0000025))
+Declaration(Class(flow:FLOW_0000034))
+Declaration(ObjectProperty(flow:FLOW_0000001))
+Declaration(ObjectProperty(flow:FLOW_0000002))
+Declaration(ObjectProperty(flow:FLOW_0000003))
+Declaration(ObjectProperty(flow:FLOW_0000004))
+Declaration(ObjectProperty(flow:FLOW_0000005))
+Declaration(ObjectProperty(flow:FLOW_0000006))
+Declaration(ObjectProperty(flow:FLOW_0000007))
+Declaration(ObjectProperty(flow:FLOW_0000008))
+Declaration(ObjectProperty(flow:FLOW_0000009))
+Declaration(ObjectProperty(flow:FLOW_0000010))
+Declaration(ObjectProperty(flow:FLOW_0000011))
+Declaration(ObjectProperty(flow:FLOW_0000012))
+Declaration(ObjectProperty(flow:FLOW_0000013))
+Declaration(ObjectProperty(flow:FLOW_0000014))
+Declaration(ObjectProperty(flow:FLOW_0000015))
+Declaration(ObjectProperty(flow:FLOW_0000016))
+Declaration(ObjectProperty(flow:FLOW_0000017))
+Declaration(ObjectProperty(flow:FLOW_0000018))
+Declaration(ObjectProperty(flow:FLOW_0000019))
+Declaration(ObjectProperty(flow:FLOW_0000020))
+Declaration(ObjectProperty(flow:FLOW_0000026))
+Declaration(ObjectProperty(flow:FLOW_0000027))
+Declaration(ObjectProperty(flow:FLOW_0000028))
+Declaration(ObjectProperty(flow:FLOW_0000029))
+Declaration(ObjectProperty(flow:FLOW_0000030))
+Declaration(ObjectProperty(flow:FLOW_0000031))
+Declaration(ObjectProperty(flow:FLOW_0000032))
+Declaration(ObjectProperty(flow:FLOW_0000033))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(iof-av:naturalLanguageDefinition))
+
 
 ############################
 #   Annotation Properties
@@ -32,13 +77,293 @@ AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
+
+############################
+#   Object Properties
+############################
+
+# Object Property: flow:FLOW_0000033 (conectado a)
+
+AnnotationAssertion(rdfs:label flow:FLOW_0000033 "conectado a"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000033 "connected to"@en)
+SymmetricObjectProperty(flow:FLOW_0000033)
+ObjectPropertyDomain(flow:FLOW_0000033 ofl:OFL_0000004)
+ObjectPropertyRange(flow:FLOW_0000033 ofl:OFL_0000004)
+
+# Object Property: flow:FLOW_0000026 (troca fluido com)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000026 "Relation between two things which have a fluid exchange connection"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000026 "exchanges fluid with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000026 "troca fluido com"@pt-br)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000026 "http://www.w3id.org/fso"@en)
+SubObjectPropertyOf(flow:FLOW_0000026 flow:FLOW_0000033)
+SymmetricObjectProperty(flow:FLOW_0000026)
+# Object Property: flow:FLOW_0000027 (feeds fluid to)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000027 "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000027 "alimenta fluido para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000027 "feeds fluid to"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000027 "http://www.w3id.org/fso"@en)
+SubObjectPropertyOf(flow:FLOW_0000027 flow:FLOW_0000026)
+InverseObjectProperties(flow:FLOW_0000027 flow:FLOW_0000028)
+
+# Object Property: flow:FLOW_0000028 (has fluid fed by)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000028 "Relation from a thing that is fed fluid to the thing feeding the fluid."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000028 "has fluid fed by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000028 "tem fluido alimentado por"@pt-br)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000028 "http://www.w3id.org/fso"@en)
+SubObjectPropertyOf(flow:FLOW_0000028 flow:FLOW_0000026)
+
+# Object Property: flow:FLOW_0000029 (tem fluido retornado por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000029 "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000029 "has fluid returned by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000029 "tem fluido retornado por"@pt-br)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000029 "http://www.w3id.org/fso"@en)
+SubObjectPropertyOf(flow:FLOW_0000029 flow:FLOW_0000027)
+InverseObjectProperties(flow:FLOW_0000029 flow:FLOW_0000031)
+
+# Object Property: flow:FLOW_0000030 (tem fluido fornecido por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000030 "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000030 "has fluid supplied by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000030 "tem fluido fornecido por"@pt-br)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000030 "http://www.w3id.org/fso"@en)
+SubObjectPropertyOf(flow:FLOW_0000030 flow:FLOW_0000027)
+InverseObjectProperties(flow:FLOW_0000030 flow:FLOW_0000032)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: flow:FLOW_0000001 (troca eletricidade com)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000001 "Relation between things that exchange electric charge, i.e. have electrical current between them."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000001 "exchanges electricity with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000001 "troca eletricidade com"@pt-br)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000001 "https://w3id.org/fso#exchangesElectricityWith"@en)
+SubObjectPropertyOf(flow:FLOW_0000001 flow:FLOW_0000033)
+SymmetricObjectProperty(flow:FLOW_0000001)
+
+# Object Property: flow:FLOW_0000002 (exchanges liquid with)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000002 "Relation between two things which have a liquid exchange connection."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000002 "exchanges liquid with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000002 "troca líquido com"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000002 flow:FLOW_0000026)
+SymmetricObjectProperty(flow:FLOW_0000002)
+
+# Object Property: flow:FLOW_0000003 (exchanges gas with)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000003 "Relation between two things which have a gas exchange connection."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000003 "exchanges gas with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000003 "troca gás com"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000003 flow:FLOW_0000026)
+SymmetricObjectProperty(flow:FLOW_0000003)
+
+# Object Property: flow:FLOW_0000004 (exchanges air with)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000004 "Relation between two things which have an air exchange connection."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000004 "exchanges air with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000004 "troca ar com"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000004 flow:FLOW_0000003)
+SymmetricObjectProperty(flow:FLOW_0000004)
+
+# Object Property: flow:FLOW_0000005 (feeds gas to)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000005 "Relation from a thing feeding gas to the thing it is feeding gas to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000005 "alimenta gás para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000005 "feeds gas to"@en)
+SubObjectPropertyOf(flow:FLOW_0000005 flow:FLOW_0000003)
+SubObjectPropertyOf(flow:FLOW_0000005 flow:FLOW_0000027)
+InverseObjectProperties(flow:FLOW_0000005 flow:FLOW_0000006)
+
+# Object Property: flow:FLOW_0000006 (tem gás alimentado por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000006 "Relation from a thing that is fed gas to the thing feeding the gas."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000006 "has gas fed by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000006 "tem gás alimentado por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000006 flow:FLOW_0000003)
+SubObjectPropertyOf(flow:FLOW_0000006 flow:FLOW_0000028)
+
+# Object Property: flow:FLOW_0000007 (retorna gás para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000007 "Relation between a thing that is returning gas to the thing it is returning gas to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000007 "retorna gás para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000007 "returns gas to"@en)
+SubObjectPropertyOf(flow:FLOW_0000007 flow:FLOW_0000005)
+SubObjectPropertyOf(flow:FLOW_0000007 flow:FLOW_0000031)
+InverseObjectProperties(flow:FLOW_0000007 flow:FLOW_0000009)
+
+# Object Property: flow:FLOW_0000008 (fornece gás para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000008 "Relation between a thing that is supplying gas to the thing it is supplying gas to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000008 "fornece gás para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000008 "supplies gas to"@en)
+SubObjectPropertyOf(flow:FLOW_0000008 flow:FLOW_0000005)
+SubObjectPropertyOf(flow:FLOW_0000008 flow:FLOW_0000032)
+InverseObjectProperties(flow:FLOW_0000008 flow:FLOW_0000010)
+
+# Object Property: flow:FLOW_0000009 (tem gás retornado por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000009 "Relation between a thing that has gas returned to it and the thing returning the gas."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000009 "has gas returned by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000009 "tem gás retornado por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000009 flow:FLOW_0000006)
+SubObjectPropertyOf(flow:FLOW_0000009 flow:FLOW_0000029)
+
+# Object Property: flow:FLOW_0000010 (tem gás fornecido por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000010 "Relation between a thing that has gas supplied to it and the thing supplying the gas."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000010 "has gas supplied by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000010 "tem gás fornecido por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000010 flow:FLOW_0000006)
+SubObjectPropertyOf(flow:FLOW_0000010 flow:FLOW_0000030)
+
+# Object Property: flow:FLOW_0000011 (alimenta ar para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000011 "Relation from a thing feeding air to the thing it is feeding air to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000011 "alimenta ar para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000011 "feeds air to"@en)
+SubObjectPropertyOf(flow:FLOW_0000011 flow:FLOW_0000004)
+SubObjectPropertyOf(flow:FLOW_0000011 flow:FLOW_0000005)
+InverseObjectProperties(flow:FLOW_0000011 flow:FLOW_0000012)
+
+# Object Property: flow:FLOW_0000012 (has air fed by)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000012 "Relation from a thing that is fed air to the thing feeding the air."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000012 "has air fed by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000012 "tem ar alimentado por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000012 flow:FLOW_0000004)
+SubObjectPropertyOf(flow:FLOW_0000012 flow:FLOW_0000006)
+
+# Object Property: flow:FLOW_0000013 (returns air to)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000013 "Relation between a thing that is returning air to the thing it is returning air to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000013 "retorna ar para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000013 "returns air to"@en)
+SubObjectPropertyOf(flow:FLOW_0000013 flow:FLOW_0000007)
+SubObjectPropertyOf(flow:FLOW_0000013 flow:FLOW_0000011)
+InverseObjectProperties(flow:FLOW_0000013 flow:FLOW_0000015)
+
+# Object Property: flow:FLOW_0000014 (fornece ar para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000014 "Relation between a thing that is supplying air to the thing it is supplying air to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000014 "fornece ar para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000014 "supplies air to"@en)
+SubObjectPropertyOf(flow:FLOW_0000014 flow:FLOW_0000008)
+SubObjectPropertyOf(flow:FLOW_0000014 flow:FLOW_0000011)
+InverseObjectProperties(flow:FLOW_0000014 flow:FLOW_0000016)
+
+# Object Property: flow:FLOW_0000015 (tem ar retornado por)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000015 "Relation between a thing that has air returned to it and the thing returning the air."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000015 "has air returned by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000015 "tem ar retornado por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000015 flow:FLOW_0000009)
+SubObjectPropertyOf(flow:FLOW_0000015 flow:FLOW_0000012)
+
+# Object Property: flow:FLOW_0000016 (has air supplied by)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000016 "Relation between a thing that has air supplied to it and the thing supplying the air."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000016 "has air supplied by"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000016 "tem ar fornecido por"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000016 flow:FLOW_0000010)
+SubObjectPropertyOf(flow:FLOW_0000016 flow:FLOW_0000012)
+
+# Object Property: flow:FLOW_0000017 (conectado logicamente a)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000017 "Relation between two things which have a logical connection (such as within a business process) but not necessarily a physical one."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000017 "conectado logicamente a"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000017 "logically connected to"@en)
+SubObjectPropertyOf(flow:FLOW_0000017 flow:FLOW_0000033)
+SymmetricObjectProperty(flow:FLOW_0000017)
+
+# Object Property: flow:FLOW_0000018 (troca sinal com)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000018 "Relation between two things which have a signal exchange connection."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000018 "exchanges signal with"@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000018 "troca sinal com"@pt-br)
+SubObjectPropertyOf(flow:FLOW_0000018 flow:FLOW_0000017)
+SymmetricObjectProperty(flow:FLOW_0000018)
+
+# Object Property: flow:FLOW_0000019 (envia sinal para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000019 "Relation from a thing sending some signal to the thing it is sending signal to."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000019 "envia sinal para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000019 "sends signal to"@en)
+SubObjectPropertyOf(flow:FLOW_0000019 flow:FLOW_0000018)
+InverseObjectProperties(flow:FLOW_0000019 flow:FLOW_0000020)
+
+# Object Property: flow:FLOW_0000020 (receives signal from)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000020 "Relation from a thing that receives some signal to the thing sending the signal."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000020 "recebe sinal de"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000020 "receives signal from"@en)
+SubObjectPropertyOf(flow:FLOW_0000020 flow:FLOW_0000018)
+
 ############################
 #   Classes
 ############################
 
-# Class: <https://www.inf.ufrgs.br/ontologies/FLOW_0000000> (root node)
+# Class: flow:FLOW_0000021 (objeto aberto ao fluxo)
 
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/FLOW_0000000> "root node"@en)
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000021 "def. a BFO:Object that is fully connected and allows fluid to flow through it."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000021 "objeto aberto ao fluxo"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000021 "open to flow object"@en)
+SubClassOf(flow:FLOW_0000021 obo:BFO_0000030)
+
+# Class: flow:FLOW_0000022 (objeto de fluxo baseado em estado aberto)
+
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000022 "def. a FLOW:StateBasedFlowObject that is open and allows fluid to flow through it."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000022 "objeto de fluxo aberto"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000022 "open flow object"@en)
+EquivalentClasses(flow:FLOW_0000022 ObjectIntersectionOf(flow:FLOW_0000034 ObjectSomeValuesFrom(obo:BFO_0000196 flow:FLOW_0000024)))
+SubClassOf(flow:FLOW_0000022 flow:FLOW_0000021)
+
+# Class: flow:FLOW_0000023 (estado de objeto de fluxo)
+
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000023 "def. a BFO:Quality that is the open/closed state of a FLOW:StateBasedFlowObject."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000023 "estado do objeto de fluxo"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000023 "flow object state"@en)
+SubClassOf(flow:FLOW_0000023 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:BFO_0000197 flow:FLOW_0000034)))
+
+# Class: flow:FLOW_0000024 (estado aberto de objeto de fluxo)
+
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000024 "def. a FLOW:FlowObjectState that is an open state."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000024 "estado aberto do objeto de fluxo"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000024 "flow object open state"@en)
+SubClassOf(flow:FLOW_0000024 flow:FLOW_0000023)
+DisjointClasses(flow:FLOW_0000024 flow:FLOW_0000025)
+
+# Class: flow:FLOW_0000025 (estado fechado de objeto de fluxo)
+
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000025 "def. a FLOW:FlowObjectState that is a closed state."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000025 "estado fechado do objeto de fluxo"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000025 "flow object closed state"@en)
+SubClassOf(flow:FLOW_0000025 flow:FLOW_0000023)
+
+# Class: flow:FLOW_0000034 (objeto de fluxo baseado em estado)
+
+AnnotationAssertion(iof-av:naturalLanguageDefinition flow:FLOW_0000034 "def. a BFO:Object that that is fully connected and may allow fluid to flow through it depending on its state."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000034 "objeto de fluxo baseado em estado"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000034 "state-based flow object"@en)
+SubClassOf(flow:FLOW_0000034 obo:BFO_0000030)
+
+
+DLSafeRule(
+  Body(
+    ClassAtom(flow:FLOW_0000021 Variable(<urn:swrl:var#e>))
+    ObjectPropertyAtom(ofl:OFL_0000018 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#l2>))
+    ObjectPropertyAtom(flow:FLOW_0000027 Variable(<urn:swrl:var#l1>) Variable(<urn:swrl:var#l2>))
+    ObjectPropertyAtom(flow:FLOW_0000027 Variable(<urn:swrl:var#l2>) Variable(<urn:swrl:var#l3>))
+  )
+  Head(
+    ObjectPropertyAtom(flow:FLOW_0000027 Variable(<urn:swrl:var#l1>) Variable(<urn:swrl:var#l3>))
+  )
+)
 
 
 )

@@ -1,0 +1,1118 @@
+@prefix : <https://www.inf.ufrgs.br/ontologies/flow.ttl#> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ofl: <https://www.inf.ufrgs.br/ontologies/ofl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix flow: <https://www.inf.ufrgs.br/ontologies/flow/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix iof-av: <https://spec.industrialontologies.org/ontology/annotation/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://www.inf.ufrgs.br/ontologies/flow.ttl> .
+
+<https://www.inf.ufrgs.br/ontologies/flow.ttl> rdf:type owl:Ontology ;
+                                                owl:versionIRI <https://www.inf.ufrgs.br/ontologies/flow/releases/2026-11-09/flow.ttl> ;
+                                                dce:contributor "Abel Correa Dias"@en ,
+                                                                "Fabrício Henrique Rodrigues"@en ,
+                                                                "Haroldo Rojas"@en ,
+                                                                "Mara Abel"@en ,
+                                                                "Nicolau Santos"@en ;
+                                                dce:creator "Cauã Roca Antunes"@en ;
+                                                dcterms:description "Ontologia para descrever fluco de fluidos através de locais de instalação em instalações de indústria de transformação."@pt-br ,
+                                                                    "Ontology for describing fluid flow through functional locations in transformation industry installations."@en ;
+                                                dcterms:license <https://opensource.org/license/mit> ;
+                                                dcterms:title "Flow Linking Ontology of Wonders (FLOW)" ;
+                                                owl:versionInfo "2026-11-09" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dce:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dce:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dce:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty ;
+                    rdfs:label "description" ,
+                               "description"@en-us .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:label "license" ,
+                           "license"@en-us .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:label "title" ,
+                         "title"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/adaptedFrom
+iof-av:adaptedFrom rdf:type owl:AnnotationProperty .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition
+iof-av:naturalLanguageDefinition rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000124
+obo:BFO_0000124 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000171 ;
+                rdfs:domain [ owl:intersectionOf ( obo:BFO_0000004
+                                                   [ rdf:type owl:Class ;
+                                                     owl:complementOf obo:BFO_0000006
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+                rdfs:range [ owl:intersectionOf ( obo:BFO_0000004
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:BFO_0000006
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:label "location of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000171
+obo:BFO_0000171 rdf:type owl:ObjectProperty ;
+                rdfs:domain [ owl:intersectionOf ( obo:BFO_0000004
+                                                   [ rdf:type owl:Class ;
+                                                     owl:complementOf obo:BFO_0000006
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+                rdfs:range [ owl:intersectionOf ( obo:BFO_0000004
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:BFO_0000006
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:label "located in"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+obo:BFO_0000196 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+obo:BFO_0000197 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:IAO_0000030 ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                rdfs:label "is about"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000053 ;
+               rdf:type owl:FunctionalProperty ;
+               obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               rdfs:label "characteristic of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:range obo:BFO_0000020 ;
+               obo:IAO_0000115 "Inverse of characteristic_of"@en ;
+               rdfs:label "has characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000079
+obo:RO_0000079 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000085 ;
+               rdfs:domain obo:BFO_0000034 ;
+               obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
+               rdfs:label "function of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+obo:RO_0000080 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000086 ;
+               obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               rdfs:label "quality of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+obo:RO_0000081 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000087 ;
+               obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+               rdfs:label "role of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000034 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has function"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:range obo:BFO_0000019 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000023 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has role"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               owl:inverseOf obo:RO_0000092 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000016 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000092
+obo:RO_0000092 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               rdfs:label "disposition of"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000001
+flow:FLOW_0000001 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000033 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between things that exchange electric charge, i.e. have electrical current between them."@en ;
+                  rdfs:label "exchanges electricity with"@en ,
+                             "troca eletricidade com"@pt-br ;
+                  iof-av:adaptedFrom "https://w3id.org/fso#exchangesElectricityWith"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000002
+flow:FLOW_0000002 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000026 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have a liquid exchange connection."@en ;
+                  rdfs:label "exchanges liquid with"@en ,
+                             "troca líquido com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000003
+flow:FLOW_0000003 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000026 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have a gas exchange connection."@en ;
+                  rdfs:label "exchanges gas with"@en ,
+                             "troca gás com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000004
+flow:FLOW_0000004 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000003 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have an air exchange connection."@en ;
+                  rdfs:label "exchanges air with"@en ,
+                             "troca ar com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000005
+flow:FLOW_0000005 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000003 ,
+                                     flow:FLOW_0000027 ;
+                  owl:inverseOf flow:FLOW_0000006 ;
+                  rdfs:comment "Relation from a thing feeding gas to the thing it is feeding gas to."@en ;
+                  rdfs:label "alimenta gás para"@pt-br ,
+                             "feeds gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000006
+flow:FLOW_0000006 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000003 ,
+                                     flow:FLOW_0000028 ;
+                  rdfs:comment "Relation from a thing that is fed gas to the thing feeding the gas."@en ;
+                  rdfs:label "has gas fed by"@en ,
+                             "tem gás alimentado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000007
+flow:FLOW_0000007 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000005 ,
+                                     flow:FLOW_0000031 ;
+                  owl:inverseOf flow:FLOW_0000009 ;
+                  rdfs:comment "Relation between a thing that is returning gas to the thing it is returning gas to."@en ;
+                  rdfs:label "retorna gás para"@pt-br ,
+                             "returns gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000008
+flow:FLOW_0000008 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000005 ,
+                                     flow:FLOW_0000032 ;
+                  owl:inverseOf flow:FLOW_0000010 ;
+                  rdfs:comment "Relation between a thing that is supplying gas to the thing it is supplying gas to."@en ;
+                  rdfs:label "fornece gás para"@pt-br ,
+                             "supplies gas to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000009
+flow:FLOW_0000009 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000006 ,
+                                     flow:FLOW_0000029 ;
+                  rdfs:comment "Relation between a thing that has gas returned to it and the thing returning the gas."@en ;
+                  rdfs:label "has gas returned by"@en ,
+                             "tem gás retornado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000010
+flow:FLOW_0000010 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000006 ,
+                                     flow:FLOW_0000030 ;
+                  rdfs:comment "Relation between a thing that has gas supplied to it and the thing supplying the gas."@en ;
+                  rdfs:label "has gas supplied by"@en ,
+                             "tem gás fornecido por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000011
+flow:FLOW_0000011 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000004 ,
+                                     flow:FLOW_0000005 ;
+                  owl:inverseOf flow:FLOW_0000012 ;
+                  rdfs:comment "Relation from a thing feeding air to the thing it is feeding air to."@en ;
+                  rdfs:label "alimenta ar para"@pt-br ,
+                             "feeds air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000012
+flow:FLOW_0000012 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000004 ,
+                                     flow:FLOW_0000006 ;
+                  rdfs:comment "Relation from a thing that is fed air to the thing feeding the air."@en ;
+                  rdfs:label "has air fed by"@en ,
+                             "tem ar alimentado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000013
+flow:FLOW_0000013 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000007 ,
+                                     flow:FLOW_0000011 ;
+                  owl:inverseOf flow:FLOW_0000015 ;
+                  rdfs:comment "Relation between a thing that is returning air to the thing it is returning air to."@en ;
+                  rdfs:label "retorna ar para"@pt-br ,
+                             "returns air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000014
+flow:FLOW_0000014 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000008 ,
+                                     flow:FLOW_0000011 ;
+                  owl:inverseOf flow:FLOW_0000016 ;
+                  rdfs:comment "Relation between a thing that is supplying air to the thing it is supplying air to."@en ;
+                  rdfs:label "fornece ar para"@pt-br ,
+                             "supplies air to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000015
+flow:FLOW_0000015 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000009 ,
+                                     flow:FLOW_0000012 ;
+                  rdfs:comment "Relation between a thing that has air returned to it and the thing returning the air."@en ;
+                  rdfs:label "has air returned by"@en ,
+                             "tem ar retornado por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000016
+flow:FLOW_0000016 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000010 ,
+                                     flow:FLOW_0000012 ;
+                  rdfs:comment "Relation between a thing that has air supplied to it and the thing supplying the air."@en ;
+                  rdfs:label "has air supplied by"@en ,
+                             "tem ar fornecido por"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000017
+flow:FLOW_0000017 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000033 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have a logical connection (such as within a business process) but not necessarily a physical one."@en ;
+                  rdfs:label "conectado logicamente a"@pt-br ,
+                             "logically connected to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000018
+flow:FLOW_0000018 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000017 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have a signal exchange connection."@en ;
+                  rdfs:label "exchanges signal with"@en ,
+                             "troca sinal com"@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000019
+flow:FLOW_0000019 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000018 ;
+                  owl:inverseOf flow:FLOW_0000020 ;
+                  rdfs:comment "Relation from a thing sending some signal to the thing it is sending signal to."@en ;
+                  rdfs:label "envia sinal para"@pt-br ,
+                             "sends signal to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000020
+flow:FLOW_0000020 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000018 ;
+                  rdfs:comment "Relation from a thing that receives some signal to the thing sending the signal."@en ;
+                  rdfs:label "recebe sinal de"@pt-br ,
+                             "receives signal from"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000026
+flow:FLOW_0000026 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000033 ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:comment "Relation between two things which have a fluid exchange connection"@en ;
+                  rdfs:label "exchanges fluid with"@en ,
+                             "troca fluido com"@pt-br ;
+                  iof-av:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000027
+flow:FLOW_0000027 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000026 ;
+                  owl:inverseOf flow:FLOW_0000028 ;
+                  rdfs:comment "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en ;
+                  rdfs:label "alimenta fluido para"@pt-br ,
+                             "feeds fluid to"@en ;
+                  iof-av:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000028
+flow:FLOW_0000028 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000026 ;
+                  rdfs:comment "Relation from a thing that is fed fluid to the thing feeding the fluid."@en ;
+                  rdfs:label "has fluid fed by"@en ,
+                             "tem fluido alimentado por"@pt-br ;
+                  iof-av:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000029
+flow:FLOW_0000029 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000027 ;
+                  owl:inverseOf flow:FLOW_0000031 ;
+                  rdfs:comment "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en ;
+                  rdfs:label "has fluid returned by"@en ,
+                             "tem fluido retornado por"@pt-br ;
+                  iof-av:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000030
+flow:FLOW_0000030 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf flow:FLOW_0000027 ;
+                  owl:inverseOf flow:FLOW_0000032 ;
+                  rdfs:comment "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en ;
+                  rdfs:label "has fluid supplied by"@en ,
+                             "tem fluido fornecido por"@pt-br ;
+                  iof-av:adaptedFrom "http://www.w3id.org/fso"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000031
+flow:FLOW_0000031 rdf:type owl:ObjectProperty .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000032
+flow:FLOW_0000032 rdf:type owl:ObjectProperty .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000033
+flow:FLOW_0000033 rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ;
+                  rdfs:domain ofl:OFL_0000004 ;
+                  rdfs:range ofl:OFL_0000004 ;
+                  rdfs:label "conectado a"@pt-br ,
+                             "connected to"@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007
+ofl:OFL_0000007 rdf:type owl:ObjectProperty ;
+                rdfs:domain ofl:OFL_0000004 ;
+                rdfs:range obo:BFO_0000040 ;
+                rdfs:label "has boundary determined by"@en ,
+                           "tem limite determinado por"@pt-br ;
+                iof-av:naturalLanguageDefinition "A relation between a functional location and a material entity such that the material entity provides the reference frame that determines the spatial boundaries of the functional location."@en ,
+                                                 "Uma relação entre um local de instalação e uma entidade material tal que a entidade material fornece o referencial que determina os limites espaciais do local de instalação."@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018
+ofl:OFL_0000018 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000171 ;
+                rdfs:domain <https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> ;
+                rdfs:range ofl:OFL_0000004 ;
+                rdfs:label "instalado em"@pt-br ,
+                           "installed at"@en ;
+                iof-av:naturalLanguageDefinition "A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties."@en ,
+                                                 "Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate."@pt-br .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+obo:BFO_0000001 rdf:type owl:Class ;
+                rdfs:label "entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000002
+obo:BFO_0000002 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000001 ;
+                obo:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
+                rdfs:label "continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+obo:BFO_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ;
+                owl:disjointWith obo:BFO_0000020 ,
+                                 obo:BFO_0000031 ;
+                rdfs:label "independent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000006
+obo:BFO_0000006 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ;
+                rdfs:label "spatial region"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+obo:BFO_0000016 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                owl:disjointWith obo:BFO_0000023 ;
+                rdfs:label "disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+obo:BFO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000020 ;
+                owl:disjointWith obo:BFO_0000019 ;
+                obo:IAO_0000115 "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances."@en ;
+                rdfs:label "realizable entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+obo:BFO_0000019 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000020 ;
+                rdfs:label "quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+obo:BFO_0000020 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ;
+                owl:disjointWith obo:BFO_0000031 ;
+                rdfs:label "specifically dependent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+obo:BFO_0000023 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                obo:IAO_0000115 "A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts."@en ;
+                rdfs:label "role"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ;
+                rdfs:label "site"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+obo:BFO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "object"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000031
+obo:BFO_0000031 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ;
+                rdfs:label "generically dependent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000034
+obo:BFO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Capability> ;
+                rdfs:label "function"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000004 ;
+                owl:disjointWith obo:BFO_0000141 ;
+                obo:IAO_0000115 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en ;
+                rdfs:label "material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000140
+obo:BFO_0000140 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000124 ;
+                                  owl:allValuesFrom obo:BFO_0000140
+                                ] ;
+                rdfs:label "continuant fiat boundary"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000141
+obo:BFO_0000141 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000004 ;
+                rdfs:label "immaterial entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000115 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+                rdfs:label "data entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000031 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom obo:BFO_0000001
+                                ] ;
+                obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en ;
+                rdfs:label "information content entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000078
+obo:IAO_0000078 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( obo:IAO_0000002
+                                                  obo:IAO_0000120
+                                                  obo:IAO_0000121
+                                                  obo:IAO_0000122
+                                                  obo:IAO_0000123
+                                                  obo:IAO_0000124
+                                                  obo:IAO_0000125
+                                                  obo:IAO_0000423
+                                                  obo:IAO_0000428
+                                                )
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000102 ;
+                obo:IAO_0000115 "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
+                rdfs:label "curation status specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000102
+obo:IAO_0000102 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:IAO_0000115 "Data about an ontology part is a data item about a part of an ontology, for example a term"@en ;
+                rdfs:label "data about an ontology part"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000225
+obo:IAO_0000225 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( obo:IAO_0000103
+                                                  obo:IAO_0000226
+                                                  obo:IAO_0000227
+                                                  obo:IAO_0000228
+                                                  obo:IAO_0000229
+                                                  obo:OMO_0001000
+                                                )
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000102 ;
+                obo:IAO_0000115 "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
+                rdfs:label "obsolescence reason specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000409
+obo:IAO_0000409 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( obo:IAO_0000410
+                                                  obo:IAO_0000420
+                                                  obo:IAO_0000421
+                                                )
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000102 ;
+                obo:IAO_0000115 "A denotator type indicates how a term should be interpreted from an ontological perspective."@en ;
+                rdfs:label "denotator type"@en .
+
+
+###  https://spec.industrialontologies.org/ontology/construct/MaterialArtifact
+<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> rdf:type owl:Class ;
+                                                                            owl:disjointWith ofl:OFL_0000004 .
+
+
+###  https://spec.industrialontologies.org/ontology/core/Core/Capability
+<https://spec.industrialontologies.org/ontology/core/Core/Capability> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf obo:BFO_0000016 ;
+                                                                      rdfs:label "capability"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel> rdf:type owl:Class ;
+                                                                                              rdfs:label "maturity level"@en-us .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000021
+flow:FLOW_0000021 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000030 ;
+                  rdfs:label "objeto aberto ao fluxo"@pt-br ,
+                             "open to flow object"@en ;
+                  iof-av:naturalLanguageDefinition "def. a BFO:Object that is fully connected and allows fluid to flow through it."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000022
+flow:FLOW_0000022 rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( flow:FLOW_0000034
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty obo:BFO_0000196 ;
+                                                               owl:someValuesFrom flow:FLOW_0000024
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf flow:FLOW_0000021 ,
+                                  flow:FLOW_0000034 ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty obo:BFO_0000196 ;
+                                    owl:someValuesFrom flow:FLOW_0000024
+                                  ] ;
+                  rdfs:label "objeto de fluxo aberto"@pt-br ,
+                             "open flow object"@en ;
+                  iof-av:naturalLanguageDefinition "def. a FLOW:StateBasedFlowObject that is open and allows fluid to flow through it."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000023
+flow:FLOW_0000023 rdf:type owl:Class ;
+                  rdfs:subClassOf [ owl:intersectionOf ( obo:BFO_0000019
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:BFO_0000197 ;
+                                                           owl:someValuesFrom flow:FLOW_0000034
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+                  rdfs:label "estado do objeto de fluxo"@pt-br ,
+                             "flow object state"@en ;
+                  iof-av:naturalLanguageDefinition "def. a BFO:Quality that is the open/closed state of a FLOW:StateBasedFlowObject."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000024
+flow:FLOW_0000024 rdf:type owl:Class ;
+                  rdfs:subClassOf flow:FLOW_0000023 ;
+                  owl:disjointWith flow:FLOW_0000025 ;
+                  rdfs:label "estado aberto do objeto de fluxo"@pt-br ,
+                             "flow object open state"@en ;
+                  iof-av:naturalLanguageDefinition "def. a FLOW:FlowObjectState that is an open state."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000025
+flow:FLOW_0000025 rdf:type owl:Class ;
+                  rdfs:subClassOf flow:FLOW_0000023 ;
+                  rdfs:label "estado fechado do objeto de fluxo"@pt-br ,
+                             "flow object closed state"@en ;
+                  iof-av:naturalLanguageDefinition "def. a FLOW:FlowObjectState that is a closed state."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/flow/FLOW_0000034
+flow:FLOW_0000034 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000030 ;
+                  rdfs:label "objeto de fluxo baseado em estado"@pt-br ,
+                             "state-based flow object"@en ;
+                  iof-av:naturalLanguageDefinition "def. a BFO:Object that that is fully connected and may allow fluid to flow through it depending on its state."@en .
+
+
+###  https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004
+ofl:OFL_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000029 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ofl:OFL_0000007 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ;
+                rdfs:label "Functional Location"@en ,
+                           "Local de Instalação"@pt-br ;
+                iof-av:adaptedFrom "ISO 14224:2016 — 'a position in a functional hierarchy where a maintainable item is or can be installed'"@en ;
+                iof-av:naturalLanguageDefinition "A functional location is a site that is a persistent spatial position in an industrial facility hierarchy where a maintainable item is or can be installed, and whose boundaries are determined in relation to delimiting material structures rather than by the equipment that may occupy it."@en ,
+                                                 "Um local de instalação é um sítio que é uma posição espacial persistente em uma hierarquia de instalação industrial onde um item manutenível está ou pode ser instalado, e cujos limites são determinados em relação a estruturas materiais delimitadoras e não pelo equipamento que possa ocupá-lo."@pt-br .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000002
+obo:IAO_0000002 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                rdfs:label "example to be eventually removed"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000103
+obo:IAO_0000103 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term was initially used in an attempt to structure part of the ontology, but in retrospect failed to do a good job."@en ;
+                rdfs:label "failed exploratory term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000120
+obo:IAO_0000120 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."@en ;
+                rdfs:label "metadata complete"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000121
+obo:IAO_0000121 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release."@en ;
+                rdfs:label "organizational term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000122
+obo:IAO_0000122 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""@en ;
+                rdfs:label "ready for release"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000123
+obo:IAO_0000123 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."@en ;
+                rdfs:label "metadata incomplete"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000124
+obo:IAO_0000124 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."@en ;
+                rdfs:label "uncurated"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000125
+obo:IAO_0000125 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."@en ;
+                rdfs:label "pending final vetting"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000226
+obo:IAO_0000226 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term was created to temporarily stand in for a semantic purpose, but is no longer needed, typically due to another permanent term being defined."@en ;
+                rdfs:label "placeholder removed"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000227
+obo:IAO_0000227 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term has been combined with one or more other terms to create a more encompassing (merged) term."@en ;
+                rdfs:label "terms merged"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000228
+obo:IAO_0000228 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term has been replaced by a term imported from another ontology."@en ;
+                rdfs:label "term imported"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000229
+obo:IAO_0000229 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term has been split into two or more new terms."@en ;
+                rdfs:label "term split"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000410
+obo:IAO_0000410 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000409 ;
+                rdfs:label "universal"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000420
+obo:IAO_0000420 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000409 ;
+                obo:IAO_0000115 "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal"@en ;
+                rdfs:label "defined class"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000421
+obo:IAO_0000421 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000409 ;
+                obo:IAO_0000115 "A named class expression is a logical expression that is given a name. The name can be used in place of the expression."@en ;
+                rdfs:label "named class expression"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000423
+obo:IAO_0000423 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "Terms with this status should eventually replaced with a term from another ontology."@en ;
+                rdfs:label "to be replaced with external ontology term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000428
+obo:IAO_0000428 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000078 ;
+                obo:IAO_0000115 "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en ;
+                rdfs:label "requires discussion"@en .
+
+
+###  http://purl.obolibrary.org/obo/OMO_0001000
+obo:OMO_0001000 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en ;
+                rdfs:label "out of scope" .
+
+
+###  http://purl.obolibrary.org/obo/OMO_0001002
+obo:OMO_0001002 rdf:type owl:NamedIndividual ,
+                         obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term was added to the ontology on the assumption it was a valid domain entity, but it turns out the entity does not exist in reality."@en ;
+                rdfs:label "domain entity does not exist" .
+
+
+###  https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> rdf:type owl:NamedIndividual ,
+                                                                                                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel> ;
+                                                                                            rdfs:label "provisional"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> rdf:type owl:NamedIndividual ,
+                                                                                                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel> ;
+                                                                                         rdfs:label "released"@en-us .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000004
+                obo:BFO_0000020
+                obo:BFO_0000031
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000006
+                obo:BFO_0000029
+                obo:BFO_0000140
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( obo:IAO_0000120
+                        obo:IAO_0000121
+                        obo:IAO_0000122
+                        obo:IAO_0000123
+                        obo:IAO_0000124
+                        obo:IAO_0000125
+                        obo:IAO_0000423
+                        obo:IAO_0000428
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( obo:IAO_0000226
+                        obo:IAO_0000227
+                        obo:IAO_0000228
+                        obo:IAO_0000229
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#e> rdf:type swrl:Variable .
+
+<urn:swrl:var#d> rdf:type swrl:Variable .
+
+<urn:swrl:var#l2> rdf:type swrl:Variable .
+
+<urn:swrl:var#l1> rdf:type swrl:Variable .
+
+<urn:swrl:var#l3> rdf:type swrl:Variable .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate flow:FLOW_0000021 ;
+                           swrl:argument1 <urn:swrl:var#e>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate ofl:OFL_0000018 ;
+                                      swrl:argument1 <urn:swrl:var#e> ;
+                                      swrl:argument2 <urn:swrl:var#l2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate flow:FLOW_0000027 ;
+                                                 swrl:argument1 <urn:swrl:var#l1> ;
+                                                 swrl:argument2 <urn:swrl:var#l2>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate flow:FLOW_0000027 ;
+                                                            swrl:argument1 <urn:swrl:var#l2> ;
+                                                            swrl:argument2 <urn:swrl:var#l3>
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate flow:FLOW_0000027 ;
+                           swrl:argument1 <urn:swrl:var#l1> ;
+                           swrl:argument2 <urn:swrl:var#l3>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000016 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000091 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000019 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000086 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000023 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000087 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000034 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000085 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

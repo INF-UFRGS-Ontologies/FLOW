@@ -15,7 +15,7 @@ release_artefacts:
 ## Ontology Metadata ##
 id: flow
 title: Flow Linking Ontology of Wonders (FLOW)
-description: "Ontology for describing fluid flow through functional locations in transformation industry installations."
+description: "Ontology for describing fluid flow through functional locations in process industry installations."
 creators:
  - Cauã Roca Antunes
 contributors:
@@ -23,6 +23,7 @@ contributors:
  - Abel Correa Dias
  - Mara Abel
  - Fabrício Henrique Rodrigues
+ - Haroldo Rojas
 
 ## Github Settings ##
 repo: FLOW

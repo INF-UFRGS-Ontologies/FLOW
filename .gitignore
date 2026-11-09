@@ -14,15 +14,6 @@ bin/
 
 .github/token.txt
 
-/flow.owl
-/flow.obo
-/flow.json
-/flow.db
-/flow-base.*
-/flow-basic.*
-/flow-full.*
-/flow-simple.*
-/flow-simple-non-classified.*
 /mappings/
 /patterns/
 /reports/

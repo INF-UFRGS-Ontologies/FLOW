@@ -2,9 +2,8 @@
 ![Build Status](https://github.com/INF-UFRGS-Ontologies/FLOW/actions/workflows/qc.yml/badge.svg)
 # Flow Linking Ontology of Wonders (FLOW)
 
-Description: Ontology for describing fluid flow through functional locations in transformation industry installations.
+Description: Ontology for describing fluid flow through functional locations in process industry installations.
 
-More information can be found at http://obofoundry.org/ontology/flow
 
 ## Versions
 
@@ -13,8 +12,6 @@ More information can be found at http://obofoundry.org/ontology/flow
 The latest version of the ontology can always be found at:
 
 https://www.inf.ufrgs.br/ontologies/flow.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
