@@ -7,14 +7,16 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://www.inf.ufrgs.br/ontologies/flow/imports/ofl_import.owl>
-<https://www.inf.ufrgs.br/ontologies/flow/releases/2026-11-09/imports/ofl_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://www.inf.ufrgs.br/ontologies/ofl/releases/2026-11-09/ofl.owl>)
-Annotation(owl:versionInfo "2026-11-09")
+<https://www.inf.ufrgs.br/ontologies/flow/releases/2026-11-13/imports/ofl_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://www.inf.ufrgs.br/ontologies/ofl/releases/2026-11-10/ofl.owl>)
+Annotation(owl:versionInfo "2026-11-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000019>))
@@ -26,21 +28,39 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000140>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
+Declaration(Class(<http://purl.obolibrary.org/obo/COB_0000035>))
+Declaration(Class(<http://purl.obolibrary.org/obo/COB_0000082>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000028>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000102>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000577>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000578>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000579>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020020>))
 Declaration(Class(<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact>))
 Declaration(Class(<https://spec.industrialontologies.org/ontology/core/Core/Capability>))
 Declaration(Class(<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel>))
+Declaration(Class(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>))
 Declaration(Class(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000124>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000171>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000299>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000312>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000079>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000080>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000081>))
@@ -49,8 +69,9 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000091>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000092>))
-Declaration(ObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007>))
-Declaration(ObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018>))
+Declaration(ObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006>))
+Declaration(ObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014>))
+Declaration(ObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))
@@ -103,6 +124,19 @@ AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/title> "title"@en-us)
 #   Object Properties
 ############################
 
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000050> (part of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000050> "a core relation that holds between a part and its whole"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000050> "part of"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000051>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000051> (has part)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000051> "a core relation that holds between a whole and its part"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000051> "has part"@en)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>)
+
 # Object Property: <http://purl.obolibrary.org/obo/BFO_0000124> (location of)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000124> "location of"@en)
@@ -122,6 +156,37 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about"@en)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000219> (denotes)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000219> "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000219> "denotes"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000136>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000235>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000030>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000235> (denoted by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000235> "inverse of the relation 'denotes'"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000235> "denoted by"@en)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000235> <http://purl.obolibrary.org/obo/BFO_0000001>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0000235> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000299> (has specified output)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0000299> "The inverse property of is specified output of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000299> "has specified output"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/OBI_0000312>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/COB_0000035>)
+
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000312> (is specified output of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0000312> "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000312> "is specified output of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/RO_0000056>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/COB_0000035>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000052> (characteristic of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000052> "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en)
@@ -135,6 +200,21 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000053> "has characteristic"@en)
 InverseFunctionalObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/BFO_0000020>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000056> "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000056> "participates in"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/RO_0000057>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000002>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000057> (has participant)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000057> "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000003>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000079> (function of)
 
@@ -195,24 +275,35 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000091> <http://purl.obo
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000092> "disposition of"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000092> <http://purl.obolibrary.org/obo/RO_0000052>)
 
-# Object Property: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> (has boundary determined by)
+# Object Property: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> (has boundary determined by)
 
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> "has boundary determined by"@en)
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> "tem limite determinado por"@pt-br)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> "A relation between a functional location and a material entity such that the material entity provides the reference frame that determines the spatial boundaries of the functional location."@en)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> "Uma relação entre um local de instalação e uma entidade material tal que a entidade material fornece o referencial que determina os limites espaciais do local de instalação."@pt-br)
-ObjectPropertyDomain(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004>)
-ObjectPropertyRange(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> <http://purl.obolibrary.org/obo/BFO_0000040>)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> "has boundary determined by"@en)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> "tem limite determinado por"@pt-br)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> "A relation between a functional location and a material entity such that the material entity provides the reference frame that determines the spatial boundaries of the functional location."@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> "Uma relação entre um local de instalação e uma entidade material tal que a entidade material fornece o referencial que determina os limites espaciais do local de instalação."@pt-br)
+ObjectPropertyDomain(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>)
+ObjectPropertyRange(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Object Property: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> (instalado em)
+# Object Property: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> (identifies)
 
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> "instalado em"@pt-br)
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> "installed at"@en)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> "A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties."@en)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> "Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate."@pt-br)
-SubObjectPropertyOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> <http://purl.obolibrary.org/obo/BFO_0000171>)
-ObjectPropertyDomain(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> <https://spec.industrialontologies.org/ontology/construct/MaterialArtifact>)
-ObjectPropertyRange(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000018> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004>)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> "identifica"@pt-br)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> "identifies"@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> "A relation between a functional location code and a functional location such that the code uniquely denotes the functional location within the organizational hierarchy following the ISO 14224 coding scheme."@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> "Uma relação entre um código de local de instalação e um local de instalação tal que o código denota unicamente o local de instalação dentro da hierarquia organizacional seguindo o esquema de codificação ISO 14224."@pt-br)
+SubObjectPropertyOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> <http://purl.obolibrary.org/obo/IAO_0000219>)
+FunctionalObjectProperty(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014>)
+ObjectPropertyDomain(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004>)
+ObjectPropertyRange(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>)
+
+# Object Property: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> (instalado em)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> "instalado em"@pt-br)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> "installed at"@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> "A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties."@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> "Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate."@pt-br)
+SubObjectPropertyOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> <http://purl.obolibrary.org/obo/BFO_0000171>)
+ObjectPropertyDomain(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> <https://spec.industrialontologies.org/ontology/construct/MaterialArtifact>)
+ObjectPropertyRange(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000017> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>)
 
 
 
@@ -229,6 +320,15 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000001> "ent
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000002> "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000002> "continuant"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000002> <http://purl.obolibrary.org/obo/BFO_0000001>)
+DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> <http://purl.obolibrary.org/obo/BFO_0000003>)
+DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000003>))
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000003> "An entity that has temporal parts and that happens, unfolds or develops through time."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000003> "occurrent"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000003> <http://purl.obolibrary.org/obo/BFO_0000001>)
+DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000002>))
 
 # Class: <http://purl.obolibrary.org/obo/BFO_0000004> (independent continuant)
 
@@ -241,6 +341,11 @@ DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolib
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000006> "spatial region"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000006> <http://purl.obolibrary.org/obo/BFO_0000141>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000015> (process)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000015> "process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000003>)
 
 # Class: <http://purl.obolibrary.org/obo/BFO_0000016> (disposition)
 
@@ -305,11 +410,28 @@ SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000140> ObjectAllValuesFrom(<htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000141> "immaterial entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000141> <http://purl.obolibrary.org/obo/BFO_0000004>)
 
+# Class: <http://purl.obolibrary.org/obo/COB_0000035> (completely executed planned process)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COB_0000035> "completely executed planned process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/COB_0000035> <http://purl.obolibrary.org/obo/COB_0000082>)
+
+# Class: <http://purl.obolibrary.org/obo/COB_0000082> (planned process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/COB_0000082> "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COB_0000082> "planned process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/COB_0000082> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data entity)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000027> "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000027> "data entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000028> (symbol)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000028> "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000028> "symbol"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000028> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000030> (information content entity)
 
@@ -345,9 +467,54 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000409> "den
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000102>)
 
+# Class: <http://purl.obolibrary.org/obo/IAO_0000577> (centrally registered identifier symbol)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000577> "A symbol that is part of a CRID and that is sufficient to look up a record from the CRID's registry."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000577> "centrally registered identifier symbol"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000577> <http://purl.obolibrary.org/obo/IAO_0000028>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000577> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/IAO_0000578>))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000578> (centrally registered identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000578> "An information content entity that consists of a CRID symbol and additional information about the CRID registry to which it belongs."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000578> "centrally registered identifier"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> <http://purl.obolibrary.org/obo/IAO_0020000>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0000577>))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000579>)))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000579> (centrally registered identifier registry)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000579> "A code set of CRID records, each consisting of a CRID symbol and additional information which was recorded in the code set through an assigning a centrally registered identifier process."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000579> "centrally registered identifier registry"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000579> <http://purl.obolibrary.org/obo/IAO_0020020>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020000> (identifier)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020000> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020000> "identifier"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0020010>)))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020000> <http://purl.obolibrary.org/obo/IAO_0000030>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0020010>))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020010> (identifier creating process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020010> "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020010> "identifier creating process"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/COB_0000035> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020000>)))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020010> <http://purl.obolibrary.org/obo/COB_0000035>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020010> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020000>))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0020020> (code set)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020020> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020020> "code set"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> <http://purl.obolibrary.org/obo/IAO_0000030>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/IAO_0020000>))
+
 # Class: <https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> (<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact>)
 
-DisjointClasses(<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004>)
+DisjointClasses(<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>)
 
 # Class: <https://spec.industrialontologies.org/ontology/core/Core/Capability> (capability)
 
@@ -358,15 +525,26 @@ SubClassOf(<https://spec.industrialontologies.org/ontology/core/Core/Capability>
 
 AnnotationAssertion(rdfs:label <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel> "maturity level"@en-us)
 
-# Class: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> (Local de Instalação)
+# Class: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> (Local de Instalação)
 
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Functional Location"@en)
-AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Local de Instalação"@pt-br)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/adaptedFrom> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "ISO 14224:2016 — 'a position in a functional hierarchy where a maintainable item is or can be installed'"@en)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "A functional location is a site that is a persistent spatial position in an industrial facility hierarchy where a maintainable item is or can be installed, and whose boundaries are determined in relation to delimiting material structures rather than by the equipment that may occupy it."@en)
-AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Um local de instalação é um sítio que é uma posição espacial persistente em uma hierarquia de instalação industrial onde um item manutenível está ou pode ser instalado, e cujos limites são determinados em relação a estruturas materiais delimitadoras e não pelo equipamento que possa ocupá-lo."@pt-br)
-SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> <http://purl.obolibrary.org/obo/BFO_0000029>)
-SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> ObjectSomeValuesFrom(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000007> <http://purl.obolibrary.org/obo/BFO_0000040>))
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> "Functional Location"@en)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> "Local de Instalação"@pt-br)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/adaptedFrom> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> "ISO 14224:2016 — 'a position in a functional hierarchy where a maintainable item is or can be installed'"@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> "A functional location is a site that is a persistent spatial position in an industrial facility hierarchy where a maintainable item is or can be installed, and whose boundaries are determined in relation to delimiting material structures rather than by the equipment that may occupy it."@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> "Um local de instalação é um sítio que é uma posição espacial persistente em uma hierarquia de instalação industrial onde um item manutenível está ou pode ser instalado, e cujos limites são determinados em relação a estruturas materiais delimitadoras e não pelo equipamento que possa ocupá-lo."@pt-br)
+SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> <http://purl.obolibrary.org/obo/BFO_0000029>)
+SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003> ObjectSomeValuesFrom(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000006> <http://purl.obolibrary.org/obo/BFO_0000040>))
+
+# Class: <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> (Código do Local de Instalação)
+
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Código do Local de Instalação"@pt-br)
+AnnotationAssertion(rdfs:label <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Functional Location Code"@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/adaptedFrom> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "ISO 14224:2016 — five-level hierarchical coding scheme"@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "A functional location code is an identifier that denotes a functional location by encoding the position's place in the ISO 14224 organizational hierarchy, with segments representing plant, system, subsystem, equipment unit, and maintainable item levels."@en)
+AnnotationAssertion(<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> "Um código de local de instalação é um identificador que denota um local de instalação codificando a posição do local na hierarquia organizacional ISO 14224, com segmentos representando os níveis de planta, sistema, subsistema, unidade de equipamento e item manutenível."@pt-br)
+SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> <http://purl.obolibrary.org/obo/IAO_0000578>)
+SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> ObjectSomeValuesFrom(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>))
+SubClassOf(<https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000004> ObjectExactCardinality(1 <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000014> <https://www.inf.ufrgs.br/ontologies/ofl/OFL_0000003>))
 
 
 ############################

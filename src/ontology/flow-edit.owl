@@ -356,7 +356,7 @@ SubClassOf(flow:FLOW_0000034 obo:BFO_0000030)
 DLSafeRule(
   Body(
     ClassAtom(flow:FLOW_0000021 Variable(<urn:swrl:var#e>))
-    ObjectPropertyAtom(ofl:OFL_0000018 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#l2>))
+    ObjectPropertyAtom(ofl:OFL_0000017 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#l2>))
     ObjectPropertyAtom(flow:FLOW_0000027 Variable(<urn:swrl:var#l1>) Variable(<urn:swrl:var#l2>))
     ObjectPropertyAtom(flow:FLOW_0000027 Variable(<urn:swrl:var#l2>) Variable(<urn:swrl:var#l3>))
   )
