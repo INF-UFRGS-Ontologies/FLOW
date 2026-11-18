@@ -1,4 +1,4 @@
-Prefix(flow:=<https://www.inf.ufrgs.br/ontologies/flow/>)
+Prefix(flow:=<https://www.inf.ufrgs.br/ontologies/FLOW/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -8,7 +8,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(iof-av:=<https://spec.industrialontologies.org/ontology/annotation/>)
-Prefix(ofl:=<https://www.inf.ufrgs.br/ontologies/ofl/>)
+Prefix(ofl:=<https://www.inf.ufrgs.br/ontologies/OFL/>)
 
 
 Ontology(<https://www.inf.ufrgs.br/ontologies/flow.owl>
@@ -95,15 +95,16 @@ ObjectPropertyRange(flow:FLOW_0000033 ofl:OFL_0000004)
 AnnotationAssertion(rdfs:comment flow:FLOW_0000026 "Relation between two things which have a fluid exchange connection"@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000026 "exchanges fluid with"@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000026 "troca fluido com"@pt-br)
-AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000026 "http://www.w3id.org/fso"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000026 "http://www.w3id.org/fso#exchangesFluidWith"@en)
 SubObjectPropertyOf(flow:FLOW_0000026 flow:FLOW_0000033)
 SymmetricObjectProperty(flow:FLOW_0000026)
+
 # Object Property: flow:FLOW_0000027 (feeds fluid to)
 
 AnnotationAssertion(rdfs:comment flow:FLOW_0000027 "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000027 "alimenta fluido para"@pt-br)
 AnnotationAssertion(rdfs:label flow:FLOW_0000027 "feeds fluid to"@en)
-AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000027 "http://www.w3id.org/fso"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000027 "http://www.w3id.org/fso#feedsFluidTo"@en)
 SubObjectPropertyOf(flow:FLOW_0000027 flow:FLOW_0000026)
 InverseObjectProperties(flow:FLOW_0000027 flow:FLOW_0000028)
 
@@ -112,7 +113,7 @@ InverseObjectProperties(flow:FLOW_0000027 flow:FLOW_0000028)
 AnnotationAssertion(rdfs:comment flow:FLOW_0000028 "Relation from a thing that is fed fluid to the thing feeding the fluid."@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000028 "has fluid fed by"@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000028 "tem fluido alimentado por"@pt-br)
-AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000028 "http://www.w3id.org/fso"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000028 "http://www.w3id.org/fso#hasFluidFedBy"@en)
 SubObjectPropertyOf(flow:FLOW_0000028 flow:FLOW_0000026)
 
 # Object Property: flow:FLOW_0000029 (tem fluido retornado por)
@@ -120,7 +121,7 @@ SubObjectPropertyOf(flow:FLOW_0000028 flow:FLOW_0000026)
 AnnotationAssertion(rdfs:comment flow:FLOW_0000029 "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000029 "has fluid returned by"@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000029 "tem fluido retornado por"@pt-br)
-AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000029 "http://www.w3id.org/fso"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000029 "http://www.w3id.org/fso#hasFluidReturnedBy"@en)
 SubObjectPropertyOf(flow:FLOW_0000029 flow:FLOW_0000027)
 InverseObjectProperties(flow:FLOW_0000029 flow:FLOW_0000031)
 
@@ -129,9 +130,25 @@ InverseObjectProperties(flow:FLOW_0000029 flow:FLOW_0000031)
 AnnotationAssertion(rdfs:comment flow:FLOW_0000030 "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000030 "has fluid supplied by"@en)
 AnnotationAssertion(rdfs:label flow:FLOW_0000030 "tem fluido fornecido por"@pt-br)
-AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000030 "http://www.w3id.org/fso"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000030 "http://www.w3id.org/fso#hasFluidSuppliedBy"@en)
 SubObjectPropertyOf(flow:FLOW_0000030 flow:FLOW_0000027)
 InverseObjectProperties(flow:FLOW_0000030 flow:FLOW_0000032)
+
+# Object Property: flow:FLOW_0000031 (retorna fluido para)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000031 "Relation implying logical return flow from a thing to another."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000031 "retorna fluido para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000031 "returns fluid to"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000031 "http://www.w3id.org/fso#returnsFluidTo"@en)
+SubObjectPropertyOf(flow:FLOW_0000031 flow:FLOW_0000028)
+
+# Object Property: flow:FLOW_0000032 (supplies fluid to)
+
+AnnotationAssertion(rdfs:comment flow:FLOW_0000032 "Relation implying logical supply flow from a thing to another."@en)
+AnnotationAssertion(rdfs:label flow:FLOW_0000032 "fornece fluido para"@pt-br)
+AnnotationAssertion(rdfs:label flow:FLOW_0000032 "supplies fluid to"@en)
+AnnotationAssertion(iof-av:adaptedFrom flow:FLOW_0000032 "http://www.w3id.org/fso#suppliesFluidTo"@en)
+SubObjectPropertyOf(flow:FLOW_0000032 flow:FLOW_0000028)
 
 
 ############################
