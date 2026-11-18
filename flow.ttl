@@ -78,6 +78,60 @@ iof-av:naturalLanguageDefinition rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                obo:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
+                rdfs:label "part of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+                rdfs:label "has part"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000124
+obo:BFO_0000124 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000171 ;
+                rdfs:domain [ owl:intersectionOf ( obo:BFO_0000004
+                                                   [ rdf:type owl:Class ;
+                                                     owl:complementOf obo:BFO_0000006
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+                rdfs:range [ owl:intersectionOf ( obo:BFO_0000004
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:BFO_0000006
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:label "location of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000171
+obo:BFO_0000171 rdf:type owl:ObjectProperty ;
+                rdfs:domain [ owl:intersectionOf ( obo:BFO_0000004
+                                                   [ rdf:type owl:Class ;
+                                                     owl:complementOf obo:BFO_0000006
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+                rdfs:range [ owl:intersectionOf ( obo:BFO_0000004
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:BFO_0000006
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:label "located in"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000196
 obo:BFO_0000196 rdf:type owl:ObjectProperty .
 
@@ -91,6 +145,41 @@ obo:IAO_0000136 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:IAO_0000030 ;
                 obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
                 rdfs:label "is about"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+obo:IAO_0000219 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000235 ;
+                rdfs:domain obo:IAO_0000030 ;
+                rdfs:range obo:BFO_0000001 ;
+                obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+                rdfs:label "denotes"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000235
+obo:IAO_0000235 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:BFO_0000001 ;
+                rdfs:range obo:IAO_0000030 ;
+                obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+                rdfs:label "denoted by"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000299
+obo:OBI_0000299 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000312 ;
+                rdfs:domain obo:COB_0000035 ;
+                obo:IAO_0000115 "The inverse property of is specified output of" ;
+                rdfs:label "has specified output"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000312
+obo:OBI_0000312 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:range obo:COB_0000035 ;
+                obo:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                rdfs:label "is specified output of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000052
@@ -107,6 +196,23 @@ obo:RO_0000053 rdf:type owl:ObjectProperty ,
                rdfs:range obo:BFO_0000020 ;
                obo:IAO_0000115 "Inverse of characteristic_of"@en ;
                rdfs:label "has characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000057 ;
+               rdfs:domain obo:BFO_0000002 ;
+               rdfs:range obo:BFO_0000003 ;
+               obo:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               rdfs:domain obo:BFO_0000003 ;
+               rdfs:range obo:BFO_0000002 ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               rdfs:label "has participant"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000079
@@ -438,8 +544,37 @@ flow:FLOW_0000033 rdf:type owl:ObjectProperty ,
                              "connected to"@en .
 
 
+###  https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000006
+ofl:OFL_0000006 rdf:type owl:ObjectProperty ;
+                rdfs:domain ofl:OFL_0000003 ;
+                rdfs:range obo:BFO_0000040 ;
+                rdfs:label "has boundary determined by"@en ,
+                           "tem limite determinado por"@pt-br ;
+                iof-av:naturalLanguageDefinition "A relation between a functional location and a material entity such that the material entity provides the reference frame that determines the spatial boundaries of the functional location."@en ,
+                                                 "Uma relação entre um local de instalação e uma entidade material tal que a entidade material fornece o referencial que determina os limites espaciais do local de instalação."@pt-br .
+
+
+###  https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000014
+ofl:OFL_0000014 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000219 ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain ofl:OFL_0000004 ;
+                rdfs:range ofl:OFL_0000003 ;
+                rdfs:label "identifica"@pt-br ,
+                           "identifies"@en ;
+                iof-av:naturalLanguageDefinition "A relation between a functional location code and a functional location such that the code uniquely denotes the functional location within the organizational hierarchy following the ISO 14224 coding scheme."@en ,
+                                                 "Uma relação entre um código de local de instalação e um local de instalação tal que o código denota unicamente o local de instalação dentro da hierarquia organizacional seguindo o esquema de codificação ISO 14224."@pt-br .
+
+
 ###  https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000017
-ofl:OFL_0000017 rdf:type owl:ObjectProperty .
+ofl:OFL_0000017 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000171 ;
+                rdfs:domain <https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> ;
+                rdfs:range ofl:OFL_0000003 ;
+                rdfs:label "instalado em"@pt-br ,
+                           "installed at"@en ;
+                iof-av:naturalLanguageDefinition "A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties."@en ,
+                                                 "Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate."@pt-br .
 
 
 #################################################################
@@ -454,8 +589,24 @@ obo:BFO_0000001 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/BFO_0000002
 obo:BFO_0000002 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000001 ;
+                owl:disjointWith obo:BFO_0000003 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000050 ;
+                                   owl:someValuesFrom obo:BFO_0000003
+                                 ] ;
                 obo:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
                 rdfs:label "continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+obo:BFO_0000003 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000001 ;
+                owl:disjointWith [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000050 ;
+                                   owl:someValuesFrom obo:BFO_0000002
+                                 ] ;
+                obo:IAO_0000115 "An entity that has temporal parts and that happens, unfolds or develops through time."@en ;
+                rdfs:label "occurrent"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000004
@@ -464,6 +615,18 @@ obo:BFO_0000004 rdf:type owl:Class ;
                 owl:disjointWith obo:BFO_0000020 ,
                                  obo:BFO_0000031 ;
                 rdfs:label "independent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000006
+obo:BFO_0000006 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ;
+                rdfs:label "spatial region"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000003 ;
+                rdfs:label "process"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000016
@@ -501,6 +664,12 @@ obo:BFO_0000023 rdf:type owl:Class ;
                 rdfs:label "role"@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ;
+                rdfs:label "site"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000030
 obo:BFO_0000030 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
@@ -522,7 +691,38 @@ obo:BFO_0000034 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/BFO_0000040
 obo:BFO_0000040 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000004 ;
+                owl:disjointWith obo:BFO_0000141 ;
+                obo:IAO_0000115 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en ;
                 rdfs:label "material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000140
+obo:BFO_0000140 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000141 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000124 ;
+                                  owl:allValuesFrom obo:BFO_0000140
+                                ] ;
+                rdfs:label "continuant fiat boundary"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000141
+obo:BFO_0000141 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000004 ;
+                rdfs:label "immaterial entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000035
+obo:COB_0000035 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ;
+                rdfs:label "completely executed planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000082
+obo:COB_0000082 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                obo:IAO_0000115 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en ;
+                rdfs:label "planned process"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000027
@@ -530,6 +730,13 @@ obo:IAO_0000027 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000030 ;
                 obo:IAO_0000115 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
                 rdfs:label "data entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000028
+obo:IAO_0000028 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000115 "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity."@en ;
+                rdfs:label "symbol"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000030
@@ -596,6 +803,104 @@ obo:IAO_0000409 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000102 ;
                 obo:IAO_0000115 "A denotator type indicates how a term should be interpreted from an ontological perspective."@en ;
                 rdfs:label "denotator type"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000577
+obo:IAO_0000577 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000028 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:IAO_0000578
+                                ] ;
+                obo:IAO_0000115 "A symbol that is part of a CRID and that is sufficient to look up a record from the CRID's registry."@en ;
+                rdfs:label "centrally registered identifier symbol"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000578
+obo:IAO_0000578 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0020000 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000577
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                       owl:onProperty obo:IAO_0000219 ;
+                                                       owl:someValuesFrom obo:IAO_0000579
+                                                     ]
+                                ] ;
+                obo:IAO_0000115 "An information content entity that consists of a CRID symbol and additional information about the CRID registry to which it belongs."@en ;
+                rdfs:label "centrally registered identifier"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000579
+obo:IAO_0000579 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0020020 ;
+                obo:IAO_0000115 "A code set of CRID records, each consisting of a CRID symbol and additional information which was recorded in the code set through an assigning a centrally registered identifier process."@en ;
+                rdfs:label "centrally registered identifier registry"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020000
+obo:IAO_0020000 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:IAO_0000219 ;
+                                                             owl:someValuesFrom obo:BFO_0000001
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:OBI_0000312 ;
+                                                             owl:someValuesFrom obo:IAO_0020010
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000219 ;
+                                  owl:someValuesFrom obo:BFO_0000001
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000312 ;
+                                  owl:someValuesFrom obo:IAO_0020010
+                                ] ;
+                obo:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
+                rdfs:label "identifier"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020010
+obo:IAO_0020010 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:COB_0000035
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:OBI_0000299 ;
+                                                             owl:someValuesFrom obo:IAO_0020000
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:COB_0000035 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:IAO_0020000
+                                ] ;
+                obo:IAO_0000115 "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en ;
+                rdfs:label "identifier creating process"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020020
+obo:IAO_0020020 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0020000
+                                ] ;
+                obo:IAO_0000115 "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en ;
+                rdfs:label "code set"@en .
+
+
+###  https://spec.industrialontologies.org/ontology/construct/MaterialArtifact
+<https://spec.industrialontologies.org/ontology/construct/MaterialArtifact> rdf:type owl:Class ;
+                                                                            owl:disjointWith ofl:OFL_0000003 .
 
 
 ###  https://spec.industrialontologies.org/ontology/core/Core/Capability
@@ -678,8 +983,37 @@ flow:FLOW_0000034 rdf:type owl:Class ;
                   iof-av:naturalLanguageDefinition "def. a BFO:Object that that is fully connected and may allow fluid to flow through it depending on its state."@en .
 
 
+###  https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000003
+ofl:OFL_0000003 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000029 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ofl:OFL_0000006 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ;
+                rdfs:label "Functional Location"@en ,
+                           "Local de Instalação"@pt-br ;
+                iof-av:adaptedFrom "ISO 14224:2016 — 'a position in a functional hierarchy where a maintainable item is or can be installed'"@en ;
+                iof-av:naturalLanguageDefinition "A functional location is a site that is a persistent spatial position in an industrial facility hierarchy where a maintainable item is or can be installed, and whose boundaries are determined in relation to delimiting material structures rather than by the equipment that may occupy it."@en ,
+                                                 "Um local de instalação é um sítio que é uma posição espacial persistente em uma hierarquia de instalação industrial onde um item manutenível está ou pode ser instalado, e cujos limites são determinados em relação a estruturas materiais delimitadoras e não pelo equipamento que possa ocupá-lo."@pt-br .
+
+
 ###  https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000004
-ofl:OFL_0000004 rdf:type owl:Class .
+ofl:OFL_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000578 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ofl:OFL_0000014 ;
+                                  owl:someValuesFrom ofl:OFL_0000003
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ofl:OFL_0000014 ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass ofl:OFL_0000003
+                                ] ;
+                rdfs:label "Código do Local de Instalação"@pt-br ,
+                           "Functional Location Code"@en ;
+                iof-av:adaptedFrom "ISO 14224:2016 — five-level hierarchical coding scheme"@en ;
+                iof-av:naturalLanguageDefinition "A functional location code is an identifier that denotes a functional location by encoding the position's place in the ISO 14224 organizational hierarchy, with segments representing plant, system, subsystem, equipment unit, and maintainable item levels."@en ,
+                                                 "Um código de local de instalação é um identificador que denota um local de instalação codificando a posição do local na hierarquia organizacional ISO 14224, com segmentos representando os níveis de planta, sistema, subsistema, unidade de equipamento e item manutenível."@pt-br .
 
 
 #################################################################
@@ -841,6 +1175,14 @@ obo:OMO_0001002 rdf:type owl:NamedIndividual ,
 ] .
 
 
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000006
+                obo:BFO_0000029
+                obo:BFO_0000140
+              )
+] .
+
+
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( obo:IAO_0000120
                         obo:IAO_0000121
@@ -876,31 +1218,6 @@ obo:OMO_0001002 rdf:type owl:NamedIndividual ,
 <urn:swrl:var#l1> rdf:type swrl:Variable .
 
 <urn:swrl:var#l3> rdf:type swrl:Variable .
-
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000053 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                      swrl:classPredicate obo:BFO_0000016 ;
-                                      swrl:argument1 <urn:swrl:var#d>
-                                    ] ;
-                          rdf:rest rdf:nil
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000091 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
- ] .
 
 [ rdf:type swrl:Imp ;
    swrl:body [ rdf:type swrl:AtomList ;
@@ -1011,6 +1328,31 @@ obo:OMO_0001002 rdf:type owl:NamedIndividual ,
                            swrl:propertyPredicate flow:FLOW_0000027 ;
                            swrl:argument1 <urn:swrl:var#l1> ;
                            swrl:argument2 <urn:swrl:var#l3>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000016 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000091 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
                          ] ;
                rdf:rest rdf:nil
              ]

@@ -457,7 +457,12 @@
 
     <!-- https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000017 -->
 
-    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000017"/>
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/ontologies/OFL/OFL_0000017">
+        <rdfs:label xml:lang="pt-br">instalado em</rdfs:label>
+        <rdfs:label xml:lang="en">installed at</rdfs:label>
+        <annotation:naturalLanguageDefinition xml:lang="en">A relation between a piece of equipment and a functional location such that the equipment is physically installed at the functional location during some temporally bounded period. The temporal bounds are captured via installedDate and removedDate data properties.</annotation:naturalLanguageDefinition>
+        <annotation:naturalLanguageDefinition xml:lang="pt-br">Uma relação entre uma peça de equipamento e um local de instalação tal que o equipamento está fisicamente instalado no local de instalação durante algum período temporalmente delimitado. Os limites temporais são capturados pelas propriedades de dados installedDate e removedDate.</annotation:naturalLanguageDefinition>
+    </owl:ObjectProperty>
 </rdf:RDF>
 
 
